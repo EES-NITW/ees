@@ -20,13 +20,28 @@ git clone <repository-url>
 
 
 To get the repository URL, click on the "Code" button on the GitHub repo page.
+
+
+
 There are basically two folders frontend and backend 
+
+
+
 For backend follow the below steps:
+
+
+
 1.Go to the backend repo by typing the follow command in the terminal of main repo 
 ```
 cd backend
 ```
+
+
+
 ***** All the backend commands must be run in the backend folder strictly check multiple times the folder before running any command in the terminal *****
+
+
+
 2. Install Dependencies
 
 Once the repository is cloned successfully, navigate into the project folder and install the required Node.js packages using:
