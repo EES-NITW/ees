@@ -25,7 +25,8 @@ To get the repository URL, click on the "Code" button on the GitHub repo page.
 
 Once the repository is cloned successfully, navigate into the project folder and install the required Node.js packages using:
 
+'''
 npm install
-
+'''
 
 This will download all necessary dependencies listed in the package.json.
