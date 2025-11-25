@@ -1,9 +1,31 @@
-Hello This repo is being developed for the ees website 
-Inorder to contribute plz ping Ishrat.
-1.Ensure that ur vscode or any IDE is being to connected to github. 
-2.Clone the repo by choosing appropriate option in the IDE.
-3.For getting repo url plz visit "Code" option present in the repo 
-4.After succesful connection with github and the IDE install necessary node packages.
-5. Use command "npm install" it will download all necessary packages which are being used in the project 
+EES Website Repository
+
+Welcome!
+This repository contains the source code for the EES website.
+If you would like to contribute, please contact Ishrat.
+
+🚀 Getting Started
+
+Follow the steps below to set up the project on your local machine:
+
+1. Connect Your IDE to GitHub
+
+Make sure your VS Code or any preferred IDE is properly connected to GitHub.
+
+2. Clone the Repository
+
+You can clone the repository using your IDE or by running the command:
+
+git clone <repository-url>
 
 
+To get the repository URL, click on the "Code" button on the GitHub repo page.
+
+3. Install Dependencies
+
+Once the repository is cloned successfully, navigate into the project folder and install the required Node.js packages using:
+
+npm install
+
+
+This will download all necessary dependencies listed in the package.json.
