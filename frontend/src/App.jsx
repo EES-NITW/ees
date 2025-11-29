@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Landing from './pages/Landing'
+import Landing from './Pages/Landing'
 import Events from './Pages/Events'
 import Teams from './Pages/Teams'
 import Placements from './Pages/Placements'
@@ -11,13 +11,14 @@ import Admin from './Pages/Admin'
 import Admin_events from './Pages/Admin_events'
 import Admin_placements from './Pages/Admin_placements'
 import Admin_teams from './Pages/Admin_teams'
-
+import Navbar from './components/Navbar'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-     <div> 
+    <div>
       <BrowserRouter>
+      <Navbar />
         <Routes> 
            <Route path="/" element={<Landing/> }/> 
            <Route path="/events" element={<Events/> }/>
@@ -30,8 +31,7 @@ function App() {
         </Routes>
 
       </BrowserRouter>
-
-     </div>
+    </div>
   )
 }
 

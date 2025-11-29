@@ -55,3 +55,21 @@ This will download all necessary dependencies listed in the package.json.
 ```
 node index.js
 ```
+
+For Frontend follow the below steps:
+
+
+
+1.Get into the frontend folder by running below command in the terminal 
+
+```
+cd frontend
+```
+2.To run the project run 
+
+```
+npm run dev
+```
+3.click on the url that is localhost:5173 and u will be able to see the main page
+
+
