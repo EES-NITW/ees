@@ -64,13 +64,11 @@ For Frontend follow the below steps:
 
 ```
 cd frontend
-
 ```
 2.To run the project run 
 
 ```
 npm run dev
-
 ```
 3.click on the url that is localhost:5173 and u will be able to see the main page
 
