@@ -11,13 +11,14 @@ import Admin from './Pages/Admin'
 import Admin_events from './Pages/Admin_events'
 import Admin_placements from './Pages/Admin_placements'
 import Admin_teams from './Pages/Admin_teams'
-
+import Navbar from './components/Navbar'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
       <BrowserRouter>
+      <Navbar />
         <Routes> 
            <Route path="/" element={<Landing/> }/> 
            <Route path="/events" element={<Events/> }/>
