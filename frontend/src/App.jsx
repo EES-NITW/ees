@@ -8,7 +8,9 @@ import Events from './Pages/Events'
 import Teams from './Pages/Teams'
 import Placements from './Pages/Placements'
 import Admin from './Pages/Admin'
-import Navbar from "./components/Navbar";
+import Admin_events from './Pages/Admin_events'
+import Admin_placements from './Pages/Admin_placements'
+import Admin_teams from './Pages/Admin_teams'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,14 +18,17 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/teams" element={<Teams />} />
-          <Route path="/placements" element={<Placements />} />
-          <Route path="/admin" element={<Admin />} />
+        <Routes> 
+           <Route path="/" element={<Landing/> }/> 
+           <Route path="/events" element={<Events/> }/>
+            <Route path="/teams" element={<Teams/> }/> 
+            <Route path="/placements" element={<Placements/> }/>
+            <Route path="/admin" element={<Admin/> }/> 
+            <Route path="/add_event" element={<Admin_events/> } /> 
+            <Route path="/add_placement" element={<Admin_placements/> } /> 
+            <Route path="/add_team" element={<Admin_teams/> } /> 
         </Routes>
+
       </BrowserRouter>
     </div>
   )
