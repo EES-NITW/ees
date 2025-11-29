@@ -1,12 +1,9 @@
-import Particlebg from "../components/Particlebg";
+export function Placements() {
+    return <div className="app-container">
+        <div className="content">
+            <h1> Placements Page</h1>
 
-export function Placements(){ 
-    return <div className="app-container"> 
-    <Particlebg/> 
-    <div className="content"> 
-        <h1> Placements Page</h1>
-    
-        </div> 
-   </div>
-}       
+        </div>
+    </div>
+}
 export default Placements;

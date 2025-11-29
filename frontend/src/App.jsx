@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Landing from './Pages/Landing'
 import Events from './Pages/Events'
 import Teams from './Pages/Teams'
+import PlacementsLogin from './Pages/PlacementsLogin'
 import Placements from './Pages/Placements'
 import Admin from './Pages/Admin'
 import Admin_events from './Pages/Admin_events'
@@ -23,7 +24,8 @@ function App() {
            <Route path="/" element={<Landing/> }/> 
            <Route path="/events" element={<Events/> }/>
             <Route path="/teams" element={<Teams/> }/> 
-            <Route path="/placements" element={<Placements/> }/>
+            <Route path="/placements" element={<PlacementsLogin/> }/>
+            <Route path="/placements/dashboard" element={<Placements/> }/>
             <Route path="/admin" element={<Admin/> }/> 
             <Route path="/add_event" element={<Admin_events/> } /> 
             <Route path="/add_placement" element={<Admin_placements/> } /> 

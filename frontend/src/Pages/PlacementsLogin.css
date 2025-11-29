@@ -1,0 +1,45 @@
+.placements-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.placements-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.google-btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background-color: white;
+}
+
+.google-btn:hover {
+  transform: scale(1.02);
+  transition: 0.2s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+}
+
+.google-icon {
+  width: 22px;
+}
+
+.note-text {
+  font-size: 0.9rem;
+  color: gray;
+}
