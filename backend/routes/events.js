@@ -16,15 +16,30 @@ events_router.post("/add_event",async (req,res)=>{
 events_router.post("/add_event_photos",(req,res)=>{ 
  /// This endpoint is used to add event photos provided event id 
 })
-events_router.delete("/delete_event",(req,res)=>{ 
-/// This endpoint is used to delete an event entry
+events_router.delete("/delete_event",async (req,res)=>{ 
+/// This endpoint is used to delete an event entry 
+// console.log("Came into delete event api");
+const id=req.query.id; 
+const query=`Delete from events where id=$1`; 
+const response=await pgclient.query(query,[id]); 
+res.status(200).json({message:"Event deleted successfully",event:response.rows[0]});
 }) 
-events_router.get("/get_all_completed",(req,res)=>{ 
+events_router.get("/get_all_completed",async (req,res)=>{ 
 /// This endpoint should return all the completed events 
+const query=`Select * from events where status='completed' ORDER BY date DESC`; 
+const response=await pgclient.query(query); 
+res.send({ 
+      events:response.rows
+})
   
 })
-events_router.get("/get_all_upcoming",(req,res)=>{ 
+events_router.get("/get_all_upcoming",async (req,res)=>{ 
 /// This endpoint should return all the upcoming events
+const query=`Select * from events where status='upcoming' ORDER BY date`; 
+const response=await pgclient.query(query); 
+res.send({ 
+      events:response.rows
+})
 })
 
 module.exports=events_router;
