@@ -1,0 +1,72 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+.nav-title {
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: aliceblue;
+}
+
+/* LINKS */
+.navbar-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Hover underline animation from center */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #00c8ff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 60%;
+}
+
+/* Active link style (persistent underline) */
+.nav-link.active::after {
+  width: 60%;
+}

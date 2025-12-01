@@ -1,11 +1,11 @@
 import Particlebg from "../components/Particlebg";
 
-export function Admin(){ 
+export function Databank(){ 
     return <div className="app-container">  
         <Particlebg/>
        <h1 className="content"> 
-        Welcome to Admin Page
+        Welcome to Databank Page
        </h1>
     </div>
 } 
-export default Admin;
+export default Databank;
