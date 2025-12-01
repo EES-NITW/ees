@@ -5,6 +5,8 @@ const cors = require("cors");
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
 const cookieParser = require("cookie-parser");
+const { pool } = require("./routes/db.js");
+const verifyToken = require("./routes/verifyToken.js");
 
 require("./routes/auth.js"); // load strategy
 
@@ -51,5 +53,15 @@ app.get(
     return res.redirect("http://localhost:5173/placements/dashboard");
   }
 );
+
+
+app.get("/api/v1/check-auth", verifyToken, (req, res) => {
+  res.status(200).json({ ok: true });
+});
+
+app.get("/api/v1/companies", verifyToken, async (req, res) => {
+  const result = await pool.query("SELECT * FROM companies");
+  res.json(result.rows);
+});
 
 app.listen(5000, () => console.log(" Server running on http://localhost:5000"));

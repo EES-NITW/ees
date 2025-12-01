@@ -13,23 +13,24 @@ import Admin_events from './Pages/Admin_events'
 import Admin_placements from './Pages/Admin_placements'
 import Admin_teams from './Pages/Admin_teams'
 import Navbar from './components/Navbar'
+import ProtectedRoute from "./ProtectedRoute";
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
       <BrowserRouter>
-      <Navbar />
-        <Routes> 
-           <Route path="/" element={<Landing/> }/> 
-           <Route path="/events" element={<Events/> }/>
-            <Route path="/teams" element={<Teams/> }/> 
-            <Route path="/placements" element={<PlacementsLogin/> }/>
-            <Route path="/placements/dashboard" element={<Placements/> }/>
-            <Route path="/admin" element={<Admin/> }/> 
-            <Route path="/add_event" element={<Admin_events/> } /> 
-            <Route path="/add_placement" element={<Admin_placements/> } /> 
-            <Route path="/add_team" element={<Admin_teams/> } /> 
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/teams" element={<Teams />} />
+          <Route path="/placements" element={<PlacementsLogin />} />
+          <Route path="/placements/dashboard" element={<ProtectedRoute> <Placements /> </ProtectedRoute>}/>
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/add_event" element={<Admin_events />} />
+          <Route path="/add_placement" element={<Admin_placements />} />
+          <Route path="/add_team" element={<Admin_teams />} />
         </Routes>
 
       </BrowserRouter>
