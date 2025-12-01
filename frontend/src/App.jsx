@@ -9,6 +9,7 @@ import Teams from './Pages/Teams'
 import Databank from './Pages/Databank'
 import PlacementsLogin from './Pages/PlacementsLogin'
 import Placements from './Pages/Placements'
+import AdminLogin from './Pages/AdminLogin'
 import Admin from './Pages/Admin'
 
 import Admin_events from './Pages/Admin_events'
@@ -16,6 +17,8 @@ import Admin_placements from './Pages/Admin_placements'
 import Admin_teams from './Pages/Admin_teams'
 import Navbar from './components/Navbar'
 import ProtectedRoute from "./ProtectedRoute";
+import AdminProtectedRoute from "./AdminProtectedRoute";
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -29,8 +32,9 @@ function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/databank" element={<Databank />} />
           <Route path="/placements" element={<PlacementsLogin />} />
-          <Route path="/placements/dashboard" element={<ProtectedRoute> <Placements /> </ProtectedRoute>}/>
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/placements/dashboard" element={<ProtectedRoute> <Placements /> </ProtectedRoute>} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={ <AdminProtectedRoute> <Admin /> </AdminProtectedRoute>}/>
           <Route path="/add_event" element={<Admin_events />} />
           <Route path="/add_placement" element={<Admin_placements />} />
           <Route path="/add_team" element={<Admin_teams />} />

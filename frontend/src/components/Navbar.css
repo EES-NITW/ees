@@ -4,7 +4,7 @@
   z-index: 100;
   width: 90%;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 12px 22px;
   border-radius: 10px;
   display: flex;
@@ -28,7 +28,7 @@
 }
 
 .nav-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   white-space: nowrap;
   color: aliceblue;
@@ -43,7 +43,7 @@
 .nav-link {
   text-decoration: none;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   position: relative;
   padding-bottom: 5px;

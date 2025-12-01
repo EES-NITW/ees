@@ -9,7 +9,7 @@ export default function Placements() {
             </h1>
 
             <button className="google-btn" onClick={() => {
-                window.location.href = "http://localhost:5000/auth/google";
+                window.location.href = "http://localhost:5000/auth/google?state=placements";
             }}>
                 <img src="https://developers.google.com/identity/images/g-logo.png" className="google-icon" />
                 Login with Google
