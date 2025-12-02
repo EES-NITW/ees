@@ -27,7 +27,7 @@ passport.use(
           [profile.id]
         );
 
-        // If new user → insert
+        // If new user then insert
         if (result.rows.length === 0) {
           result = await pool.query(
             "INSERT INTO users (google_id, email, name) VALUES ($1,$2,$3) RETURNING *",
