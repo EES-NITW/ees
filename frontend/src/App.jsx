@@ -3,18 +3,20 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Landing from './Pages/Landing'
-import Events from './Pages/Events'
-import Teams from './Pages/Teams'
-import Databank from './Pages/Databank'
-import PlacementsLogin from './Pages/PlacementsLogin'
-import Placements from './Pages/Placements'
-import AdminLogin from './Pages/AdminLogin'
-import Admin from './Pages/Admin'
 
-import Admin_events from './Pages/Admin_events'
-import Admin_placements from './Pages/Admin_placements'
-import Admin_teams from './Pages/Admin_teams'
+import Landing from './Pages/Home/Landing'
+import Events from './Pages/Events/Events'
+import Teams from './Pages/Teams/Teams'
+import DatabankLogin from './Pages/Databank/DatabankLogin'
+import Databank from './Pages/Databank/Databank'
+import PlacementsLogin from './Pages/Placements/PlacementsLogin'
+import Placements from './Pages/Placements/Placements'
+import AdminLogin from './Pages/Admin/AdminLogin'
+import Admin from './Pages/Admin/Admin'
+
+import Admin_events from './Pages/Admin/Admin_events'
+import Admin_placements from './Pages/Admin/Admin_placements'
+import Admin_teams from './Pages/Admin/Admin_teams'
 import Navbar from './components/Navbar'
 import ProtectedRoute from "./ProtectedRoute";
 import AdminProtectedRoute from "./AdminProtectedRoute";
@@ -30,7 +32,8 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/events" element={<Events />} />
           <Route path="/teams" element={<Teams />} />
-          <Route path="/databank" element={<Databank />} />
+          <Route path="/databank" element={<DatabankLogin />} />
+          <Route path="/databank/dashboard" element={<Databank/>} />
           <Route path="/placements" element={<PlacementsLogin />} />
           <Route path="/placements/dashboard" element={<ProtectedRoute> <Placements /> </ProtectedRoute>} />
           <Route path="/admin" element={<AdminLogin />} />

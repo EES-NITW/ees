@@ -1,7 +1,7 @@
-import Particlebg from "../components/Particlebg";
+import Particlebg from "../../components/Particlebg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import CompanyCard from "../components/CompanyCard";
+import CompanyCard from "../../components/CompanyCard";
 import "./Placements.css";
 
 export default function Placements() {

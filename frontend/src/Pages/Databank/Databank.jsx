@@ -1,4 +1,4 @@
-import Particlebg from "../components/Particlebg";
+import Particlebg from "../../components/Particlebg";
 
 export function Databank(){ 
     return <div className="app-container">  
