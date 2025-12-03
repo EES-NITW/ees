@@ -1,3 +1,4 @@
+@import "tailwindcss";
 .app-container { 
   position:relative; 
   height:95vh; 
