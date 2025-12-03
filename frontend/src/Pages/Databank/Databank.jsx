@@ -21,6 +21,7 @@ export function Databank() {
         <Navbar />
         <div>
           <h1 className="text-white ">Welcome to Databank page </h1>
+          {/* Edit this page in this div only */}
         </div>
       </div>
     </div>
