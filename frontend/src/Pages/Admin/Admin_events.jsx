@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CreateContentModel from "../components/CreateContentModel";
-import Event_card from "../components/Event_card";
-import { useContent } from "../hooks/useContent";
+import CreateContentModel from "../../components/CreateContentModel";
+import Event_card from "../../components/Event_card";
+import { useContent } from "../../hooks/useContent";
 import "./Admin_events_styles.css";
 
 export function Admin_events() {

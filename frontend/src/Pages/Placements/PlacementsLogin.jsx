@@ -1,5 +1,5 @@
 import "./PlacementsLogin.css";
-import Particlebg from "../components/Particlebg";
+import Particlebg from "../../components/Particlebg";
 export default function Placements() {
     return (
         <div className="placements-container">

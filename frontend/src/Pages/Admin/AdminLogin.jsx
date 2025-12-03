@@ -1,5 +1,5 @@
 import "./AdminLogin.css";
-import Particlebg from "../components/Particlebg";
+import Particlebg from "../../components/Particlebg";
 import { FaLock } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
