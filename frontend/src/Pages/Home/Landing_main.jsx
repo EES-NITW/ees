@@ -1,7 +1,8 @@
-import Navbar from "../../components/Navbar";
+import React from "react";
 import Particles from "../../components/Particles";
+import Navbar from "../../components/Navbar";
 
-export function Databank() {
+const Landing2 = () => {
   return (
     <div className="w-full min-h-screen relative bg-black overflow-hidden">
       <div className="absolute inset-0 ">
@@ -20,10 +21,11 @@ export function Databank() {
       <div>
         <Navbar />
         <div>
-          <h1 className="text-white ">Welcome to Databank page </h1>
+          <h1 className="text-white ">Welcome to EES Portal</h1>
         </div>
       </div>
     </div>
   );
-}
-export default Databank;
+};
+
+export default Landing2;
