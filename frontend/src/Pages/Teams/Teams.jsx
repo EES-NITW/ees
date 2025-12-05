@@ -1,31 +1,51 @@
+// import Navbar from "../../components/Navbar";
+// import Particles from "../../components/Particles";
+
+// export default function Teams() {
+//   return (
+//     <div className="w-full min-h-screen relative bg-black overflow-hidden">
+//       <div className="absolute inset-0">
+//         <Particles
+//           particleColors={["#ffffff", "#ffffff"]}
+//           particleCount={200}
+//           particleSpread={10}
+//           speed={0.1}
+//           particleBaseSize={100}
+//           moveParticlesOnHover={true}
+//           alphaParticles={false}
+//           disableRotation={false}
+//         />
+//       </div>
+
+//       <div>
+//         <Navbar />
+//         <div>
+//           <h1 className="text-white">Welcome to Teams page</h1>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 import Navbar from "../../components/Navbar";
 import Particlebg from "../../components/Particlebg";
-import Particles from "../../components/Particles";
 
-export function Teams() {
+export default function Teams() {
   return (
-    <div className="w-full min-h-screen relative bg-black overflow-hidden">
-      <div className="absolute inset-0 ">
-        {/* style={{ width: '100%', height: '1000px', position: 'relative' }} */}
-        <Particles
-          particleColors={["#ffffff", "#ffffff"]}
-          particleCount={200}
-          particleSpread={10}
-          speed={0.1}
-          particleBaseSize={100}
-          moveParticlesOnHover={true}
-          alphaParticles={false}
-          disableRotation={false}
-        />
-      </div>
-      <div>
+    <div className="teams-container">
+      {/* Background EXACTLY like Placements */}
+      <Particlebg />
+
+      {/* Foreground content */}
+      <div className="relative z-10">
         <Navbar />
-        <div>
-          <h1 className="text-white ">Welcome to Teams page </h1>
-          {/* Edit this page in this div only */}
-        </div>
+        
+        <h1 className="text-white text-center text-2xl mt-6">
+          Welcome to Teams page
+        </h1>
       </div>
     </div>
   );
 }
-export default Teams;
+
+
+
