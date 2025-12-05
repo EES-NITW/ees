@@ -1,0 +1,6 @@
+.teams-container {
+  position: relative;
+  min-height: 100vh;
+  background: black;
+  overflow: hidden;
+}

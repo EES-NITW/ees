@@ -1,7 +1,10 @@
+import Event_card from "../../components/Event_card";
 import Navbar from "../../components/Navbar";
 import Particles from "../../components/Particles";
+import { useContent } from "../../hooks/useContent";
 
 export function Events() {
+  const contents = useContent();
   return (
     <div className="w-full min-h-screen relative bg-black overflow-hidden">
       <div className="absolute inset-0 ">
@@ -22,6 +25,11 @@ export function Events() {
         <div>
           <h1 className="text-white ">Welcome to events page</h1>
           {/* Edit this page in this div only */}
+        </div>
+        <div className="flex justify-center flex-wrap m-2 ">
+          {contents.map((event) => (
+            <Event_card key={event.id} event={event} delete_enabled={false} />
+          ))}
         </div>
       </div>
     </div>
