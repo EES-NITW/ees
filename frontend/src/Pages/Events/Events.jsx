@@ -28,7 +28,7 @@ export function Events() {
         </div>
         <div className="flex justify-center flex-wrap m-2 ">
           {contents.map((event) => (
-            <Event_card key={event.id} event={event} />
+            <Event_card key={event.id} event={event} delete_enabled={false} />
           ))}
         </div>
       </div>

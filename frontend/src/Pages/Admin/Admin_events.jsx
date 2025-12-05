@@ -9,15 +9,26 @@ export function Admin_events() {
   const [model_open, setModel_open] = useState(false);
   return (
     <div>
-      <h1>Current Events are</h1> 
-      <button onClick={()=>{setModel_open(true)}} >  
+      <h1>Current Events are</h1>
+      <button
+        onClick={() => {
+          setModel_open(true);
+        }}
+      >
         Manage Events
-      </button> 
-      {model_open &&  <CreateContentModel  open={model_open} onClose={()=>{setModel_open(false)}} />}
-      <div className="events_style"> 
-      {contents.map(event => (
-        <Event_card key={event.id} event={event} />
-      ))} 
+      </button>
+      {model_open && (
+        <CreateContentModel
+          open={model_open}
+          onClose={() => {
+            setModel_open(false);
+          }}
+        />
+      )}
+      <div className="events_style">
+        {contents.map((event) => (
+          <Event_card key={event.id} event={event} delete_enabled={true} />
+        ))}
       </div>
     </div>
   );

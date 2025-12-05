@@ -31,7 +31,7 @@ export function Admin_teams() {
       </div>
       <div className="flex justify-center flex-wrap">
         {members.map((member) => (
-          <Member_card key={member.id} member={member} />
+          <Member_card key={member.id} member={member} delete_enabled={true} />
         ))}
       </div>
     </div>
