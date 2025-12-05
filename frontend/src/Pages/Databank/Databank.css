@@ -1,0 +1,53 @@
+body {
+  color: white;
+}
+
+.cont {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.databank-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(218, 203, 203, 0.12);
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 35px;
+}
+
+.databank-cont h2 {
+  font-size: 1.7rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  color: white;
+}
+
+.databank-link {
+  padding: 12px 32px;
+  margin: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: #3d3b3b;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(46, 46, 46, 0.85);
+}
+
+.databank-link:hover {
+  background-color: rgba(248, 243, 243, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0px 0px 20px rgba(219, 212, 212, 0.1);
+}
