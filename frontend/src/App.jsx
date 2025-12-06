@@ -35,8 +35,7 @@ function App() {
           <Route path="/" element={<Landing2 />} />
           <Route path="/events" element={<Events />} />
           <Route path="/teams" element={<Teams />} />
-          <Route path="/databank" element={<DatabankLogin />} />
-          <Route path="/databank/dashboard" element={<Databank />} />
+          <Route path="/databank" element={<Databank />} />
           <Route path="/placements" element={<PlacementsLogin />} />
           <Route
             path="/placements/dashboard"

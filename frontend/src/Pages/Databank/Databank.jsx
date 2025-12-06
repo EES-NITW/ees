@@ -18,7 +18,14 @@ export function Databank() {
           disableRotation={false}
         />
       </div>
+<<<<<<< HEAD
       <div>
+=======
+      <div className="content-layer">
+        <div className="databank-navbar">
+          <Navbar />
+        </div>
+>>>>>>> e75422bde4f28a19e255e1aaf5b02fbed28dc26e
         <div className="cont">
           {/* <h1 className="text-white ">Welcome to Databank page </h1> */}
           {/* Edit this page in this div only */}
