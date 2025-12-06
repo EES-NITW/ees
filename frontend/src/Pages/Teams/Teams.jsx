@@ -29,10 +29,8 @@ export default function Teams() {
               />
             ))}
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
 }
-
-
