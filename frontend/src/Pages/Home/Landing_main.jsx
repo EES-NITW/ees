@@ -19,7 +19,6 @@ const Landing2 = () => {
         />
       </div>
       <div>
-        <Navbar />
         <div>
           <h1 className="text-white ">Welcome to EES Portal</h1>
           {/* Edit this page in this div only */}

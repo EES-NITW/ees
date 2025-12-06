@@ -16,7 +16,6 @@ export default function Teams() {
 
       {/* Foreground content */}
       <div className="relative z-10">
-        <Navbar />
         <div>
           <h1 className="text-white ">Welcome to Teams page </h1>
           {/* Edit this page in this div only */}
@@ -29,7 +28,7 @@ export default function Teams() {
               />
             ))}
           </div>
-        </section>
+        </div>
       </div>
     </div>
   );
