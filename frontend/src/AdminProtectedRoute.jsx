@@ -15,7 +15,7 @@ export default function AdminProtectedRoute({ children }) {
   }, []);
 
   if (auth === null) return null; 
-  if (!auth) return <Navigate to="/admin" replace />;
+  if (!auth) return <Navigate to="/admin/login" replace />;
 
   return children;
 }
