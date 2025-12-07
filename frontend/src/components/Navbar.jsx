@@ -15,7 +15,7 @@ function Navbar() {
         <NavLink to="/teams" className="nav-link">Teams</NavLink>
         <NavLink to="/databank" className="nav-link">Databank</NavLink>
         <NavLink to="/placements" className="nav-link">Placements</NavLink>
-        <NavLink to="/admin" className="nav-link">Admin</NavLink>
+        <NavLink to="/admin/login" className="nav-link">Admin</NavLink>
       </div>
     </nav>
   );

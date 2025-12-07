@@ -10,12 +10,15 @@ import DatabankLogin from "./Pages/Databank/DatabankLogin";
 import Databank from "./Pages/Databank/Databank";
 import PlacementsLogin from "./Pages/Placements/PlacementsLogin";
 import Placements from "./Pages/Placements/Placements";
+// admin
 import AdminLogin from "./Pages/Admin/AdminLogin";
 import Admin from "./Pages/Admin/Admin";
-
-import Admin_events from "./Pages/Admin/Admin_events";
-import Admin_placements from "./Pages/Admin/Admin_placements";
-import Admin_teams from "./Pages/Admin/Admin_teams";
+import Dashboard from "./Pages/Admin/Dashboard";
+import ManageTeams from "./Pages/Admin/ManageTeams";
+import ManageEvents from "./Pages/Admin/ManageEvents";
+import ManagePlacements from "./Pages/Admin/ManagePlacements";
+import Settings from "./Pages/Admin/Settings";
+//
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./ProtectedRoute";
 import AdminProtectedRoute from "./AdminProtectedRoute";
@@ -27,35 +30,30 @@ function App() {
   return (
     <div>
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="/" element={<Landing2 />} />
           <Route path="/events" element={<Events />} />
           <Route path="/teams" element={<Teams />} />
-          <Route path="/databank" element={<DatabankLogin />} />
-          <Route path="/databank/dashboard" element={<Databank />} />
+          <Route path="/databank" element={<Databank />} />
           <Route path="/placements" element={<PlacementsLogin />} />
           <Route
             path="/placements/dashboard"
             element={
               <ProtectedRoute>
-                {" "}
-                <Placements />{" "}
+                <Placements />
               </ProtectedRoute>
             }
           />
-          <Route path="/admin" element={<AdminLogin />} />
-          <Route
-            path="/admin/dashboard"
-            element={
-              <AdminProtectedRoute>
-                {" "}
-                <Admin />{" "}
-              </AdminProtectedRoute>
-            }
-          />
-          <Route path="/add_event" element={<Admin_events />} />
-          <Route path="/add_placement" element={<Admin_placements />} />
-          <Route path="/add_team" element={<Admin_teams />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminProtectedRoute><Admin /></AdminProtectedRoute>}>
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="teams" element={<ManageTeams />} />
+            <Route path="events" element={<ManageEvents />} />
+            <Route path="placements" element={<ManagePlacements />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+
         </Routes>
       </BrowserRouter>
     </div>

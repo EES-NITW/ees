@@ -1,3 +1,13 @@
+.particles-layer {
+  z-index: 0;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
 body {
   color: white;
 }
@@ -8,6 +18,11 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+.databank-cont,
+.databank-link,
+.databank-navbar {
+  pointer-events: auto;
 }
 .databank-cont {
   display: flex;

@@ -18,7 +18,6 @@ export function DatabankLogin() {
         />
       </div>
       <div>
-        <Navbar />
         <div>
           <h1 className="text-white ">Welcome to Databank</h1>
         </div>

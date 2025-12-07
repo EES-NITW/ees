@@ -1,0 +1,103 @@
+/* SIDEBAR MAIN CONTAINER */
+.sidebar {
+  width: 240px;
+  height: calc(100vh - 70px);   /* below navbar */
+  position: fixed;
+  top: 70px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   /* space for bottom buttons */
+  padding: 20px 10px;
+  color: white;
+  transition: width 0.15s linear;
+}
+
+.sidebar.collapsed {
+  width: 75px;
+}
+
+/* MENU SECTION (CENTERED) */
+.menu {
+  flex-grow: 1;  /* push to center vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* MENU ITEM BUTTONS */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.menu-item.active {
+  background: rgba(255,255,255,0.25);
+  border-left: 4px solid #00c2ff;
+}
+
+/* COLLAPSED MODE - hide text only */
+.sidebar.collapsed .menu-item span {
+  display: none;
+}
+
+.sidebar.collapsed .menu-item {
+  justify-content: center;   /* center icon only */
+}
+
+/* FOOTER BUTTONS (collapse + logout) */
+.bottom-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.collapse-btn,
+.logout-btn {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  border: none;
+  background: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sidebar.collapsed .collapse-btn,
+.sidebar.collapsed .logout-btn {
+  justify-content: center;   /* icon centered */
+}
+
+.sidebar.collapsed .collapse-btn span,
+.sidebar.collapsed .logout-btn span {
+  display: none;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 0, 0, 0.25);
+}
+
+/* ICON ROTATION FOR COLLAPSE BUTTON */
+.rotate {
+  transform: rotate(180deg);
+}

@@ -21,7 +21,6 @@ export function Events() {
         />
       </div>
       <div>
-        <Navbar />
         <div>
           <h1 className="text-white ">Welcome to events page</h1>
           {/* Edit this page in this div only */}

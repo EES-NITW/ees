@@ -97,4 +97,6 @@ app.get("/api/v1/companies", verifyToken, async (req, res) => {
   res.json(result.rows);
 });
 
+
+
 app.listen(5000, () => console.log(" Server running on http://localhost:5000"));
