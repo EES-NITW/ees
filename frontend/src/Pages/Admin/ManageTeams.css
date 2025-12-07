@@ -116,7 +116,9 @@
   cursor: pointer;
   font-weight: 600;
 }
-
+option{
+  color: black;
+}
 /* helper text for errors/success */
 
 .modal-msg {
