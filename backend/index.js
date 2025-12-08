@@ -14,8 +14,9 @@ require("./routes/auth.js"); // load strategy
 
 const admin_router = require("./routes/admin");
 const events_router = require("./routes/events");
-const teams_router=require("./routes/teams.js");
+const teams_router = require("./routes/teams.js");
 const settings_router = require("./routes/settings");
+const placements_router = require("./routes/placements");
 
 const app = express();
 app.use(express.json());
@@ -30,8 +31,9 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use("/api/v1/admin", admin_router);
 app.use("/api/v1/events", events_router);
-app.use("/api/v1/teams",teams_router); 
+app.use("/api/v1/teams", teams_router);
 app.use("/api/v1/settings", settings_router);
+app.use("/api/v1/placements", placements_router);
 
 //  auth paths 
 app.get("/auth/google", (req, res, next) => {
@@ -84,6 +86,16 @@ app.get(
     return res.redirect("http://localhost:5173/placements");
   }
 );
+
+app.post("/auth/logout", (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    sameSite: "lax",
+    secure: false
+  });
+
+  return res.json({ message: "Logged out" });
+});
 
 
 
