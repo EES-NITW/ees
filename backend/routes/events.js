@@ -39,7 +39,9 @@ events_router.get("/", async (req, res) => {
        FROM events
        ORDER BY date DESC`
     );
-    res.json(result.rows);
+    res.json({ 
+      events: result.rows
+    });
   } catch (err) {
     console.error("Get Events Error:", err);
     res.status(500).json({ error: "Internal server error" });

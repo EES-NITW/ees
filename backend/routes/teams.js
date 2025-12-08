@@ -154,4 +154,12 @@ teams_router.delete("/delete-all", verifyToken, verifyAdmin, async (req, res) =>
     }
 });
 
+teams_router.get("/members",async (req,res)=>{  
+  
+    const response=await pool.query("SELECT * FROM members ORDER BY team, name");
+    res.send({ 
+        results: response.rows,
+        message: "Members fetched successfully"
+    })
+})
 module.exports = teams_router;
