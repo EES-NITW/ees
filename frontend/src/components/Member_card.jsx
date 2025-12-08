@@ -11,7 +11,7 @@ export function Member_card({ member, delete_enabled }) {
     console.log("delete member");
   }
   return (
-    <div className="text-white rounded-2xl bg-gray-800 m-2 p-4 w-80 h-50">
+    <div className="text-white rounded-2xl bg-gray-800 m-2 p-4 w-80 h-100">
       <div className="flex justify-between">
         <h1> Member Card </h1>
         {delete_enabled && (
@@ -20,6 +20,13 @@ export function Member_card({ member, delete_enabled }) {
           </div>
         )}
       </div>
+      {member.img_url && (
+        <img
+          src={member.img_url}
+          alt="member"
+          className="w-40 h-40 rounded-full"
+        />
+      )}
       <p> Member ID : {member.id} </p>
       <p> Member Name : {member.name} </p>
       <p> Member Email : {member.roll_no} </p>

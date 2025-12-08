@@ -73,7 +73,7 @@ app.get(
       if (user.role === "admin") {
         return res.redirect("http://localhost:5173/admin/dashboard");
       } else {
-        return res.redirect("http://localhost:5173/admin"); // redirect to login again
+        return res.redirect("http://localhost:5173/admin/login"); // redirect to login again
       }
     }
 

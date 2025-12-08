@@ -38,7 +38,12 @@ export function Add_member_comp({ open, onClose }) {
         Add a member
       </button>
       <h1>Add_member_comp</h1>
-      <button onClick={onClose}> Close </button>
+      <button
+        onClick={onClose}
+        className="bg-blue-500 rounded-2xl cursor-pointer hover:bg-green-600 text-white p-2 m-2"
+      >
+        Close
+      </button>
     </div>
   );
 }

@@ -1,0 +1,135 @@
+.manage-teams-container {
+  padding: 30px;
+  color: white;
+}
+
+.mt-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.mt-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.mt-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.add-btn {
+  background: #00c896;
+  color: black;
+}
+
+.del-btn {
+  background: #ffcc00;
+  color: black;
+}
+
+.delall-btn {
+  background: #ff4b4b;
+  color: white;
+}
+
+.mt-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* MODALS */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  padding: 24px;
+  width: 420px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: white;
+}
+
+.modal-box h3 {
+  margin-bottom: 6px;
+}
+
+.modal-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-box input,
+.modal-box select {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.submit-btn {
+  padding: 11px;
+  width: 100%;
+  background: #00c896;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close-btn {
+  padding: 10px;
+  width: 100%;
+  background: #ff4b4b;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+option{
+  color: black;
+}
+/* helper text for errors/success */
+
+.modal-msg {
+  font-size: 14px;
+  min-height: 18px;
+}
+
+.modal-msg.error {
+  color: #ff9d9d;
+}
+
+.modal-msg.success {
+  color: #9dffb0;
+}
