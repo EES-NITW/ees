@@ -10,10 +10,11 @@
 
 body {
   color: white;
+  overflow: hidden;
 }
 
 .cont {
-  height: 80vh;
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;

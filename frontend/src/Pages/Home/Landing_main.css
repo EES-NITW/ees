@@ -1,0 +1,38 @@
+body {
+  color: white;
+  padding-bottom: 220px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  bottom: 0px;
+  padding: 20px 40px;
+  background-color: #050505;
+}
+.footer-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+.footer-text {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.25px;
+}
+
+.footer-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

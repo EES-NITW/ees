@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Events from "./Pages/Events/Events";
 import Teams from "./Pages/Teams/Teams";
-import DatabankLogin from "./Pages/Databank/DatabankLogin";
 import Databank from "./Pages/Databank/Databank";
 import PlacementsLogin from "./Pages/Placements/PlacementsLogin";
 import Placements from "./Pages/Placements/Placements";
@@ -28,7 +27,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
+    <div className="min-h-screen">
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -37,14 +36,7 @@ function App() {
           <Route path="/teams" element={<Teams />} />
           <Route path="/databank" element={<Databank />} />
           <Route path="/placements" element={<PlacementsLogin />} />
-          <Route
-            path="/placements/dashboard"
-            element={
-              <ProtectedRoute>
-                <Placements />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/placements/dashboard" element={<ProtectedRoute><Placements /></ProtectedRoute>}/>
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin" element={<AdminProtectedRoute><Admin /></AdminProtectedRoute>}>
             <Route path="dashboard" element={<Dashboard />} />

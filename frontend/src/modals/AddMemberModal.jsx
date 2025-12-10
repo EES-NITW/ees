@@ -73,7 +73,7 @@ export default function AddMemberModal({ onClose }) {
 
           <input
             type="text"
-            placeholder="Enter roll number e.g. 223713"
+            placeholder="Enter roll number e.g. 24EEB..."
             value={rollNo}
             onChange={(e) => setRollNo(e.target.value)}
             required
@@ -98,7 +98,7 @@ export default function AddMemberModal({ onClose }) {
 
           <input
             type="url"
-            placeholder="Enter LinkedIn profile URL (optional)"
+            placeholder="Enter LinkedIn profile URL"
             value={linkedin}
             onChange={(e) => setLinkedin(e.target.value)}
           />

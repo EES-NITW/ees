@@ -1,0 +1,159 @@
+.mp-container {
+  padding: 30px;
+  color: white;
+}
+
+.mp-title {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.mp-info {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.mp-error {
+  color: #ff9d9d;
+}
+
+
+.mp-buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  margin-top: 10px;
+}
+
+
+.mp-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.add-company {
+  background: #00c896;
+  color: black;
+}
+
+.remove-company {
+  background: #ff7070;
+  color: white;
+}
+
+.add-student {
+  background: #00a2ff;
+  color: white;
+}
+
+.remove-student {
+  background: #ffb347;
+  color: black;
+}
+
+.add-offer {
+  background: #9b59b6;
+  color: white;
+}
+
+.remove-offer {
+  background: #e74c3c;
+  color: white;
+}
+
+.mp-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Modal shared styles (same as others) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-box {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  padding: 24px;
+  width: 440px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  color: white;
+}
+
+.modal-box h3 {
+  margin-bottom: 4px;
+}
+
+.modal-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-box input,
+.modal-box select,
+.modal-box textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  resize: vertical;
+}
+
+.submit-btn {
+  padding: 11px;
+  width: 100%;
+  background: #00c896;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close-btn {
+  padding: 10px;
+  width: 100%;
+  background: #ff4b4b;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal-msg {
+  font-size: 14px;
+  min-height: 18px;
+}
+
+.modal-msg.error {
+  color: #ff9d9d;
+}
+
+.modal-msg.success {
+  color: #9dffb0;
+}

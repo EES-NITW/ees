@@ -6,8 +6,11 @@ export default function AdminDashboard() {
   const [stats, setStats] = useState({
     totalMembers: 0,
     eventsThisYear: 0,
+    totalCompanies: 0,
+    totalStudents: 0,
     logs: [],
   });
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -67,7 +70,18 @@ export default function AdminDashboard() {
           <h2>{stats.eventsThisYear}</h2>
           <p>Events This Year</p>
         </div>
+
+        <div className="stat-card">
+          <h2>{stats.totalCompanies}</h2>
+          <p>Total Companies</p>
+        </div>
+
+        <div className="stat-card">
+          <h2>{stats.totalStudents}</h2>
+          <p>Total Students</p>
+        </div>
       </div>
+
 
       {/* RECENT ACTIVITY */}
       <div className="activity-section">
