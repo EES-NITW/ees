@@ -23,49 +23,56 @@ export function Databank() {
           {/* <h1 className="text-white ">Welcome to Databank page </h1> */}
           {/* Edit this page in this div only */}
           <div className="databank-cont">
-            <h2>Select your Year</h2>
+            <h2>Study Material</h2>
             <a
               className="databank-link"
               href="https://drive.google.com/drive/folders/1lb8LSwypAcJ3p3gWCyJFcPqOsUYspl8V"
+              target="_blank"
             >
               1st Year
             </a>
             <a
               className="databank-link"
               href="https://drive.google.com/drive/u/1/folders/1lhUe3vseIxr04SZp1y9geN8yqs0lu884"
+              target="_blank"
             >
               2nd Year
             </a>
             <a
               className="databank-link"
               href="https://drive.google.com/drive/folders/1ljSwgfuMNJQ7mguzQyRaWGePA2zBH1Uy"
+              target="_blank"
             >
               3rd Year
             </a>
             <a
               className="databank-link"
               href="https://drive.google.com/drive/u/1/folders/1lngxzisIDHRA94mWxSHg6aWppIsGZRhX"
+              target="_blank"
             >
               4th Year
             </a>
           </div>
           <div className="databank-cont">
-            <h2>Access Resume</h2>
+            <h2>Resume Repo</h2>
             <a
               className="databank-link"
               href="https://drive.google.com/drive/u/1/folders/1DWPmlZh8Bx_eEum1Rk2NoaGZsrLvLqre"
+              target="_blank"
             >
               SDE
             </a>
             <a
               className="databank-link"
               href="https://drive.google.com/drive/u/1/folders/1DYw_MI-gDULgIxGYrnSzvZA_v2GVnY4d"
+              target="_blank"
             >
               Data Analytics
             </a>
             <a
               className="databank-link"
               href="https://drive.google.com/drive/u/1/folders/1DY6_MK3XGc3fUYF74eDUbZt6MrbYFeuC"
+              target="_blank"
             >
               Core
             </a>
