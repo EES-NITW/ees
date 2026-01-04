@@ -1,7 +1,7 @@
 .company-card {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 10px;
-  padding: 20px;
+  padding: 20px 50px;
   text-align: center;
   transition: transform 0.25s ease, background 0.25s ease;
   cursor: pointer;
@@ -29,7 +29,7 @@
   padding: 8px 16px;
   border: none;
   border-radius: 6px;
-  background-color: #00c8ff;
+  background-color: #787314;
   font-weight: 600;
   cursor: pointer;
 }

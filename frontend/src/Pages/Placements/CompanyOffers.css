@@ -1,0 +1,41 @@
+.company-offers-container {
+  min-height: 100vh;
+  padding: 120px 40px 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #00c8ff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filters select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.empty-text {
+  color: #ccc;
+  text-align: center;
+  margin-top: 40px;
+}

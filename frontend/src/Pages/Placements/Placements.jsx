@@ -9,16 +9,18 @@ export default function Placements() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/v1/companies", { withCredentials: true })
+      .get("http://localhost:5000/api/v1/placements/companies", {
+        withCredentials: true,
+      })
       .then((res) => setCompanies(res.data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.error(err));
   }, []);
 
   return (
     <div className="placements-container">
-    <Particlebg />
+      <Particlebg />
       <h1 className="placements-title">
-        Explore companies offering internships and placement opportunities
+        Explore companies offering internships and placements
       </h1>
 
       <div className="companies-grid">
@@ -28,6 +30,7 @@ export default function Placements() {
             id={company.id}
             name={company.name}
             img={company.img_url}
+            link={`/placements/company/${company.id}`}
           />
         ))}
       </div>

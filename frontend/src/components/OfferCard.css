@@ -1,0 +1,36 @@
+.offer-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.offer-card h3 {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.offer-card p {
+  color: #ccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.offer-card a {
+  color: #0a66c2;
+  font-size: 22px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.offer-card button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #00c8ff;
+  color: #000;
+  font-weight: 500;
+  cursor: pointer;
+}

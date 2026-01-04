@@ -41,7 +41,8 @@ app.get("/auth/google", (req, res, next) => {
   passport.authenticate("google", {
     scope: ["profile", "email"],
     session: false,
-    state: state
+    state: state,
+    prompt: "select_account",
   })(req, res, next);
 });
 
@@ -49,7 +50,7 @@ app.get("/auth/google", (req, res, next) => {
 app.get(
   "/auth/google/callback",
   passport.authenticate("google", {
-    failureRedirect: "http://localhost:5173/placements",
+    failureRedirect: "http://localhost:5173/",
     session: false,
   }),
   (req, res) => {
@@ -83,7 +84,7 @@ app.get(
     }
 
     // Default fallback (should never execute normally)
-    return res.redirect("http://localhost:5173/placements");
+    return res.redirect("http://localhost:5173/");
   }
 );
 
@@ -107,10 +108,10 @@ app.get("/api/v1/check-admin", verifyToken, verifyAdmin, (req, res) => {
   res.status(200).json({ ok: true });
 });
 
-app.get("/api/v1/companies", verifyToken, async (req, res) => {
-  const result = await pool.query("SELECT * FROM companies");
-  res.json(result.rows);
-});
+// app.get("/api/v1/companies", verifyToken, async (req, res) => {
+//   const result = await pool.query("SELECT * FROM companies");
+//   res.json(result.rows);
+// });
 
 
 

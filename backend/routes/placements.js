@@ -37,7 +37,7 @@ function getPublicIdFromUrl(url, folder) {
 
 //  GET COMPANIES LIST 
 // GET /api/v1/placements/companies
-placements_router.get("/companies", verifyToken, verifyAdmin, async (req, res) => {
+placements_router.get("/companies", verifyToken, async (req, res) => {
   try {
     const result = await pool.query(
       "SELECT id, name, img_url FROM companies ORDER BY name ASC"
@@ -45,9 +45,41 @@ placements_router.get("/companies", verifyToken, verifyAdmin, async (req, res) =
     res.json(result.rows);
   } catch (err) {
     console.error("Get companies error:", err);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json({ error: "Failed to fetch companies" });
   }
 });
+
+// GET offers for a company
+placements_router.get("/company/:companyId/offers", verifyToken, async (req, res) => {
+  const { companyId } = req.params;
+
+  try {
+    const result = await pool.query(
+      `
+      SELECT 
+        o.id,
+        o.type,
+        o.role,
+        o.offer_date,
+        o.experience,
+        s.name AS student_name,
+        s.roll_no,
+        s.linkedin
+      FROM offers o
+      JOIN students s ON o.student_id = s.id
+      WHERE o.company_id = $1
+      ORDER BY o.offer_date DESC
+      `,
+      [companyId]
+    );
+
+    res.json(result.rows);
+  } catch (err) {
+    console.error("Get offers error:", err);
+    res.status(500).json({ error: "Failed to fetch offers" });
+  }
+});
+
 
 //  GET STUDENTS LIST 
 // GET /api/v1/placements/students
