@@ -9,10 +9,19 @@ import {
   FaGlobe,
   FaEnvelope,
 } from "react-icons/fa";
+import Snowfall from 'react-snowfall';
 
 const Landing2 = () => {
   return (
     <div className="w-full min-h-screen relative bg-black">
+      <Snowfall
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+        }}
+        color="#82c3d9"
+      />
       <div className="header">
         <p className="text-blue-400 tracking-wide text-sm mb-3 mt-4">
           EST. 2002
