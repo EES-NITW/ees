@@ -23,7 +23,7 @@ export function Databank() {
           {/* <h1 className="text-white ">Welcome to Databank page </h1> */}
           {/* Edit this page in this div only */}
           <div className="databank-cont">
-            <h2>Study Material</h2>
+            <h2>Select Your Year</h2>
             <a
               className="databank-link"
               href="https://drive.google.com/drive/folders/1lb8LSwypAcJ3p3gWCyJFcPqOsUYspl8V"

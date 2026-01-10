@@ -10,6 +10,11 @@
   position: relative;
   z-index: 2;
   pointer-events: none;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 body {
@@ -22,7 +27,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 100px;
 }
 .databank-cont,
 .databank-link,
