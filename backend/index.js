@@ -14,6 +14,7 @@ require("./routes/auth.js"); // load strategy
 
 const admin_router = require("./routes/admin");
 const events_router = require("./routes/events");
+const eventsPublicRouter = require("./routes/eventsPublic");
 const teams_router = require("./routes/teams.js");
 const settings_router = require("./routes/settings");
 const placements_router = require("./routes/placements");
@@ -34,6 +35,7 @@ app.use("/api/v1/events", events_router);
 app.use("/api/v1/teams", teams_router);
 app.use("/api/v1/settings", settings_router);
 app.use("/api/v1/placements", placements_router);
+app.use("/api/v1/events/public", eventsPublicRouter);
 
 //  auth paths 
 app.get("/auth/google", (req, res, next) => {
